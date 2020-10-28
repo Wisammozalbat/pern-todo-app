@@ -12,7 +12,6 @@ const EditTodo = props => {
         axios.put("/todos/" + id, { description: todo.description })
         .then(res => {
             console.log(res);
-            // props.onEdit();
             props.history.replace("/");
         })
         .catch(err => {
